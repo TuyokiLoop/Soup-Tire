@@ -239,35 +239,36 @@ body, html {
 @media (max-width: 768px) {
 
     body, html {
-        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
 
     #screen {
         display: flex;
         flex-direction: column;
-        justify-content: center;   /* centra vertical */
-        align-items: center;       /* centra horizontal */
-        min-height: 100vh;
-        padding-bottom: 60px;      /* espacio para taskbar */
+        align-items: center;
+        justify-content: flex-start; /* que empiece arriba */
+        padding: 20px 10px 80px 10px; /* espacio abajo para taskbar */
+        box-sizing: border-box;
     }
 
     .sidebar-icons {
         position: relative;
         flex-direction: row;
         justify-content: center;
-        gap: 25px;
-        top: 10px;
-        left: 0;
+        gap: 30px;
         margin-bottom: 20px;
     }
 
     .window {
         position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0;
         top: auto;
         left: auto;
         transform: none;
-        width: 95%;
-        margin: 0 auto;
     }
 
     .window-body {
@@ -275,10 +276,13 @@ body, html {
     }
 
     .character-large {
-        display: none;
+        display: none; 
     }
 
     .taskbar {
         position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
 }
