@@ -1,36 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Soup Tire</title>
-
-<style>
-    /* Cargar fuente personalizada */
-    @font-face {
-        font-family: 'MiFuente';
-        src: url('fonts/EpicFont.ttf') format('truetype');
-    }
-
-    body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #000;
-    }
-
-    h1 {
-        font-family: 'MiFuente', sans-serif;
-        font-size: 4rem;
-        color: white;
-        text-align: center;
-        font-weight: normal; /* 🔥 quitar negritas */
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Loop - Refined Desktop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>Coming Soon..</h1>
+
+    <div id="screen">
+        <div class="sidebar-icons">
+            <div class="icon">
+                <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png" alt="Welcome">
+                <span>WELCOME</span>
+            </div>
+            <div class="icon">
+                <img src="https://win98icons.alexmeub.com/icons/png/envelope_closed-0.png" alt="Host">
+                <span>Soup Tire</span>
+            </div>
+            <div class="icon">
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="Archive">
+                <span>Newsletters</span>
+            </div>
+        </div>
+
+        <div class="window-container">
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16" style="margin-right: 5px;">
+                        Mis Documentos
+                    </div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                
+                <div class="window-menu">
+                    <span>Archivo</span>
+                    <span>Editar</span>
+                    <span>Ver</span>
+                    <span>Favoritos</span>
+                    <span>Ayuda</span>
+                </div>
+
+                <div class="window-body">
+                    <div class="post-header">
+                        <span class="post-date">Marzo 1, 2026</span>
+                        <span class="post-notes">1 Nota</span>
+                    </div>
+                    
+                    <div class="image-frame">
+                        <img src="https://64.media.tumblr.com/f7988365a6f236968037373f13969741/27607755b76f2549-9c/s1280x1920/1908f51957262bc2ca172b0c95029e06173004b5.png" alt="Post">
+                    </div>
+                    
+                    <div class="caption-container">
+                        <p class="caption">
+                            game that got unfinished early but i liked the art i did for it still (2020)
+                        </p>
+                    </div>
+
+                    <div class="tags">
+                        <a href="#">#game</a>
+                        <a href="#">#pixelart</a>
+                        <a href="#">#concept</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="decorations">
+            <img src="https://64.media.tumblr.com/565c49015949d9703f83769c02829285/395356e9c0587635-f0/s400x600/546a362699f056d64119859f5119c8f25350995a.png" class="character-large">
+        </div>
+
+        <div class="taskbar">
+            <div class="start-button">
+                <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" width="18">
+                <span>Inicio</span>
+            </div>
+
+            <div class="taskbar-divider"></div>
+
+            <div class="task-active">
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16">
+                <span>Mis Documentos</span>
+            </div>
+
+            <div class="system-tray">
+                <img src="https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-0.png" width="16">
+                <span id="clock">00:00 AM</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeString = hours + ':' + minutes + ' ' + ampm;
+
+        document.getElementById('clock').textContent = timeString;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+    </script>
+
 </body>
 </html>
