@@ -2,6 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- ICONO DE LA PESTAÑA -->
+    <link rel="icon" type="image/x-icon" href="Img/Mei_icon.png">
+
     <title>Loop - WebSite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -16,8 +20,9 @@
         <img id="musicIcon" src="Sounds, Speech, and Audio Devices.ico" alt="Music">
     </button>
 
+    <!-- AUDIO -->
     <audio id="bgMusic" loop>
-        <source src="Mus/room_peaceful.ogg" type="audio/mpeg">
+        <source src="Mus/room_peaceful.ogg" type="audio/ogg">
     </audio>
 
 
@@ -45,7 +50,7 @@
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16" style="margin-right:5px;">
-                    !Bienvenido¡
+                    ¡Bienvenido!
                 </div>
                 <div class="title-bar-controls">
                     <button></button>
@@ -75,7 +80,7 @@
 
                 <div class="caption-container">
                     <p>
-                        ¡Bienvenidos a mi página de noticias! Aquí encontrarás las últimas novedades sobre mis proyectos, eventos y más. ¡Gracias por visitarme!
+                        ¡Bienvenidos a mi página de noticias! Aquí encontrarás las últimas novedades sobre mis proyectos, eventos y más.
                     </p>
                 </div>
 
@@ -88,9 +93,12 @@
     </div>
 
 
+    <!-- DECORACIONES -->
     <div class="decorations">
-        <a href="Recursos/mei.html" class="mei-button">
-            <img src="Img/Mei.png">
+
+        <!-- AHORA MEI SI REDIRIGE -->
+        <a href="Recursos/mei.html">
+            <img src="Img/Mei.png" class="mei-button">
         </a>
 
         <img src="Img/Mei_Ramire.png" class="character-large">
@@ -120,6 +128,7 @@
 
 
 <script>
+
 /* RELOJ */
 function updateClock() {
     const now = new Date();
@@ -141,21 +150,19 @@ setInterval(updateClock, 1000);
 /* MÚSICA */
 const musicButton = document.getElementById("musicToggle");
 const bgMusic = document.getElementById("bgMusic");
-const musicIcon = document.getElementById("musicIcon");
 
 let isPlaying = false;
 
 musicButton.addEventListener("click", () => {
     if (!isPlaying) {
         bgMusic.play();
-        musicIcon.src = "Sounds, Speech, and Audio Devices.ico";
         isPlaying = true;
     } else {
         bgMusic.pause();
-        musicIcon.src = "Sounds, Speech, and Audio Devices.ico";
         isPlaying = false;
     }
 });
+
 </script>
 
 </body>
