@@ -229,6 +229,45 @@ body, html {
     filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2));
 }
 
+.mei-button {
+    position: absolute;
+    right: 380px; 
+    bottom: 33px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mei-button img {
+    width: 60px;
+    transition: transform 0.2s ease;
+}
+
+.mei-button:hover img {
+    transform: scale(1.1);
+}
+
+.music-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #c0c7c8;
+    border: 2px solid;
+    border-color: #ffffff #424242 #424242 #ffffff;
+    padding: 4px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.music-button img {
+    width: 22px;
+}
+
+.music-button:active {
+    border-color: #424242 #ffffff #ffffff #424242;
+}
+
 .decorations {
     position: absolute;
     width: 100%;

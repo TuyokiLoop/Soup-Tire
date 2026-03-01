@@ -1,228 +1,162 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <title>Loop - WebSite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
 
+<div id="screen">
+
+    <!-- BOTÓN DE MÚSICA -->
+    <button id="musicToggle" class="music-button">
+        <img id="musicIcon" src="Sounds, Speech, and Audio Devices.ico" alt="Music">
+    </button>
+
+    <audio id="bgMusic" loop>
+        <source src="Mus/room_peaceful.ogg" type="audio/mpeg">
+    </audio>
 
 
-    <div id="screen">
-
-        <div class="sidebar-icons">
-            <div class="icon">
-                <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png" alt="Welcome">
-
-                <span>Bienvenido</span>
-
-            </div>
-
-            <div class="icon">
-
-                <img src="https://win98icons.alexmeub.com/icons/png/envelope_closed-0.png" alt="Host">
-
-                <span>Soup Tire</span>
-
-            </div>
-
-            <div class="icon">
-
-                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="Archive">
-
-                <span>Newsletters</span>
-
-            </div>
-
+    <div class="sidebar-icons">
+        <div class="icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png">
+            <span>Bienvenido</span>
         </div>
 
-
-
-        <div class="window-container">
-
-            <div class="window">
-
-                <div class="title-bar">
-
-                    <div class="title-bar-text">
-
-                        <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16" style="margin-right: 5px;">
-
-                        Mis Documentos
-
-                    </div>
-
-                    <div class="title-bar-controls">
-
-                        <button aria-label="Minimize"></button>
-
-                        <button aria-label="Maximize"></button>
-
-                        <button aria-label="Close"></button>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="window-menu">
-
-                    <span>Archivo</span>
-
-                    <span>Editar</span>
-
-                    <span>Ver</span>
-
-                    <span>Favoritos</span>
-
-                    <span>Ayuda</span>
-
-                </div>
-
-
-
-                <div class="window-body">
-
-                    <div class="post-header">
-
-                        <span class="post-date">Marzo 1, 2026</span>
-
-                        <span class="post-notes">1 Nota</span>
-
-                    </div>
-
-                    
-
-                    <div class="image-frame">
-
-                        <img src="Img/cat.png" alt="Post">
-
-                    </div>
-
-                    
-
-                    <div class="caption-container">
-
-                        <p class="caption">
-
-                            ¡Bienvenidos a mi página de noticias! Aquí encontrarás las últimas novedades sobre mis proyectos, eventos y más. ¡Gracias por visitarme!
-
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="tags">
-
-                        <a href="#">#Bienvenido</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/envelope_closed-0.png">
+            <span>Soup Tire</span>
         </div>
 
-
-
-        <div class="decorations">
-
-            <img src="Img/Mei_Ramire.png" class="character-large">
-
+        <div class="icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png">
+            <span>Newsletters</span>
         </div>
-
-
-
-        <div class="taskbar">
-
-            <div class="start-button">
-
-                <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" width="18">
-
-                <span>Inicio</span>
-
-            </div>
-
-
-
-            <div class="taskbar-divider"></div>
-
-
-
-            <div class="task-active">
-
-                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16">
-
-                <span>Mis Documentos</span>
-
-            </div>
-
-
-
-            <div class="system-tray">
-
-                <img src="https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-0.png" width="16">
-
-                <span id="clock">00:00 AM</span>
-
-            </div>
-
-        </div>
-
     </div>
 
 
+    <div class="window-container">
+        <div class="window">
 
-    <script>
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16" style="margin-right:5px;">
+                    !Bienvenido¡
+                </div>
+                <div class="title-bar-controls">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
 
-    function updateClock() {
+            <div class="window-menu">
+                <span>Archivo</span>
+                <span>Editar</span>
+                <span>Ver</span>
+                <span>Favoritos</span>
+                <span>Ayuda</span>
+            </div>
 
-        const now = new Date();
+            <div class="window-body">
+
+                <div class="post-header">
+                    <span>Marzo 1, 2026</span>
+                    <span>1 Nota</span>
+                </div>
+
+                <div class="image-frame">
+                    <img src="Img/cat.png" alt="Post">
+                </div>
+
+                <div class="caption-container">
+                    <p>
+                        ¡Bienvenidos a mi página de noticias! Aquí encontrarás las últimas novedades sobre mis proyectos, eventos y más. ¡Gracias por visitarme!
+                    </p>
+                </div>
+
+                <div class="tags">
+                    <a href="#">#Bienvenido</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
+    <div class="decorations">
+        <a href="Recursos/mei.html" class="mei-button">
+            <img src="Img/Mei.png">
+        </a>
 
-        let hours = now.getHours();
-
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-
-
-
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-
-        hours = hours % 12;
-
-        hours = hours ? hours : 12;
+        <img src="Img/Mei_Ramire.png" class="character-large">
+    </div>
 
 
+    <div class="taskbar">
+        <div class="start-button">
+            <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" width="18">
+            <span>Inicio</span>
+        </div>
 
-        const timeString = hours + ':' + minutes + ' ' + ampm;
+        <div class="taskbar-divider"></div>
+
+        <div class="task-active">
+            <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png" width="16">
+            <span>Mis Documentos</span>
+        </div>
+
+        <div class="system-tray">
+            <img src="https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-0.png" width="16">
+            <span id="clock">00:00 AM</span>
+        </div>
+    </div>
+
+</div>
 
 
+<script>
+/* RELOJ */
+function updateClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
 
-        document.getElementById('clock').textContent = timeString;
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
 
+    document.getElementById('clock').textContent =
+        hours + ':' + minutes + ' ' + ampm;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+
+/* MÚSICA */
+const musicButton = document.getElementById("musicToggle");
+const bgMusic = document.getElementById("bgMusic");
+const musicIcon = document.getElementById("musicIcon");
+
+let isPlaying = false;
+
+musicButton.addEventListener("click", () => {
+    if (!isPlaying) {
+        bgMusic.play();
+        musicIcon.src = "Sounds, Speech, and Audio Devices.ico";
+        isPlaying = true;
+    } else {
+        bgMusic.pause();
+        musicIcon.src = "Sounds, Speech, and Audio Devices.ico";
+        isPlaying = false;
     }
-
-
-
-    updateClock();
-
-    setInterval(updateClock, 1000);
-
-    </script>
-
-
+});
+</script>
 
 </body>
-
 </html>
